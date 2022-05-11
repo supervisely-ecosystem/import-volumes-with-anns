@@ -1,6 +1,6 @@
 <div align="center" markdown>
 
-<img src="" style="width: 100%;"/>
+<img src="https://i.imgur.com/yRR9brX.png" style="width: 100%;"/>
 
 # Import Volumes in Supervisely format
 
