@@ -78,6 +78,6 @@ As a result we will get project `my_volumes_project` with 2 datasets named: `ds1
 
 ### Demo
 Example of uploading volumes project with annotations to Supervisely:
-![]()
+![](https://i.imgur.com/61MvEbb.gif)
 
 
