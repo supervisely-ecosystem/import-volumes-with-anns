@@ -1,5 +1,5 @@
 {
-  "name": "Import Volumes with Annotation in Supervisely format",
+  "name": "Import Volumes with Annotations in Supervisely format",
   "type": "app",
   "categories": [
     "Import"
