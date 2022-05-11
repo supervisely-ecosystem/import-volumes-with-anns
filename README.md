@@ -30,7 +30,6 @@ Import volumes in Supervisely format with annotations. Volume files must be in `
 You can upload a directory or an archive. If you are uploading an archive, it must contain a single top-level directory.
 
 Directory name defines project name. Subdirectories define dataset names.
-If you don't have `key_id_map.json`, it will be created automatically during import.
 
 Project directory example:
 
