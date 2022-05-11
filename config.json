@@ -8,8 +8,8 @@
   "docker_image": "supervisely/base-py-sdk:6.17.3",
   "main_script": "src/main.py",
   "task_location": "workspace_tasks",
-  "icon": "https://imgur.com/a9u0M3Y.png",
-  "icon_background": "#FFFFFF",
+  "icon": "https://i.imgur.com/B9VUQPv.png",
+  "icon_cover": true,
   "headless": true,
   "instance_version": "6.4.48",
   "context_menu": {
