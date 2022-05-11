@@ -60,7 +60,7 @@ As a result we will get project `my_volumes_project` with 2 datasets named: `ds1
 
 # How to Run
 
-**Step 1.** Add [Import Volumes with Annotation in Supervisely format](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/import-volumes-with-anns) app to your team from Ecosystem
+**Step 1.** Add [Import Volumes in Supervisely format](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/import-volumes-with-anns) app to your team from Ecosystem
 
 <img data-key="sly-module-link" data-module-slug="supervisely-ecosystem/import-volumes-with-anns" src="https://i.imgur.com/16lSFXP.png" width="350px" style='padding-bottom: 10px'/>
 
