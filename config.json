@@ -2,7 +2,8 @@
   "name": "Import Volumes in Supervisely format",
   "type": "app",
   "categories": [
-    "Import"
+    "import",
+    "volumes"
   ],
   "description": "Import Supervisely volumes project with annotations",
   "docker_image": "supervisely/base-py-sdk:6.17.3",
