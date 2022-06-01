@@ -6,7 +6,7 @@
     "volumes"
   ],
   "description": "Import Supervisely volumes project with annotations",
-  "docker_image": "supervisely/base-py-sdk:6.17.3",
+  "docker_image": "supervisely/base-py-sdk:6.18.1",
   "main_script": "src/main.py",
   "task_location": "workspace_tasks",
   "icon": "https://i.imgur.com/B9VUQPv.png",
