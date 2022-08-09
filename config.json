@@ -11,6 +11,7 @@
   "task_location": "workspace_tasks",
   "icon": "https://i.imgur.com/B9VUQPv.png",
   "icon_cover": true,
+ "poster": "https://user-images.githubusercontent.com/48245050/182855159-50a5c414-268d-4d50-9d2a-b04c04fb07bf.jpg",
   "headless": true,
   "instance_version": "6.4.48",
   "context_menu": {
