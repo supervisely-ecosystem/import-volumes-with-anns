@@ -6,18 +6,22 @@
     "dicom"
   ],
   "description": "Import Supervisely volumes project with annotations",
-  "docker_image": "supervisely/base-py-sdk:6.35.0",
+  "docker_image": "supervisely/base-py-sdk:6.68.1",
   "main_script": "src/main.py",
   "task_location": "workspace_tasks",
   "icon": "https://i.imgur.com/B9VUQPv.png",
   "icon_cover": true,
- "poster": "https://user-images.githubusercontent.com/48245050/182855159-50a5c414-268d-4d50-9d2a-b04c04fb07bf.jpg",
+  "poster": "https://user-images.githubusercontent.com/48245050/182855159-50a5c414-268d-4d50-9d2a-b04c04fb07bf.jpg",
   "headless": true,
-  "instance_version": "6.4.48",
+  "min_agent_version": "6.7.4",
+  "min_instance_version": "6.5.46",
   "context_menu": {
+    "context_category": "Import",
     "target": [
       "files_folder",
-      "files_file"
+      "files_file",
+      "agent_folder",
+      "agent_file"
     ]
   }
 }
