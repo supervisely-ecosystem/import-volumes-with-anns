@@ -11,11 +11,11 @@ print(f"App source directory: {root_source_dir}")
 sys.path.append(root_source_dir)
 
 # only for convenient debug
-from dotenv import load_dotenv
-debug_env_path = os.path.join(root_source_dir, "debug.env")
-secret_debug_env_path = os.path.join(root_source_dir, "secret_debug.env")
-load_dotenv(debug_env_path)
-load_dotenv(secret_debug_env_path, override=True)
+# from dotenv import load_dotenv
+# debug_env_path = os.path.join(root_source_dir, "debug.env")
+# secret_debug_env_path = os.path.join(root_source_dir, "secret_debug.env")
+# load_dotenv(debug_env_path)
+# load_dotenv(secret_debug_env_path, override=True)
 
 
 api: sly.Api = sly.Api.from_env()
