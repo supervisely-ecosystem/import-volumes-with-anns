@@ -1,28 +1,47 @@
-import os
-
+import os, shutil
+from os.path import join
 import supervisely as sly
+from supervisely.io.fs import silent_remove, get_file_name
+from supervisely.io.fs import mkdir
 
-import sly_functions as f
-import sly_globals as g
-
-
-@g.my_app.callback("import-volumes-with-anns")
-@sly.timeit
-def import_volumes_with_anns(api: sly.Api, task_id: int, context: dict, state: dict, app_logger) -> None:
-
-    project_dir = f.download_data_from_team_files(api=api, task_id=task_id, save_path=g.STORAGE_DIR)
-    project_name = os.path.basename(project_dir)
-    sly.upload_volume_project(dir=project_dir, api=api, workspace_id=g.WORKSPACE_ID, project_name=project_name, log_progress=True)
-
-    g.my_app.stop()
+from dotenv import load_dotenv
 
 
-def main():
-    sly.logger.info(
-        "Script arguments", extra={"TEAM_ID": g.TEAM_ID, "WORKSPACE_ID": g.WORKSPACE_ID}
-    )
-    g.my_app.run(initial_events=[{"command": "import-volumes-with-anns"}])
+load_dotenv("local.env")
+load_dotenv(os.path.expanduser("~/supervisely.env"))
+
+api = sly.Api.from_env()
+
+INPUT_DIR: str = os.environ.get("modal.state.slyFolder", None)
+INPUT_FILE: str = os.environ.get("modal.state.slyFile", None)
+
+if INPUT_DIR:
+    IS_ON_AGENT = api.file.is_on_agent(INPUT_DIR)
+else:
+    IS_ON_AGENT = api.file.is_on_agent(INPUT_FILE)
+
+STORAGE_DIR: str = sly.app.get_data_dir()
+mkdir(STORAGE_DIR, True)
 
 
-if __name__ == "__main__":
-    sly.main_wrapper("main", main)
+class MyImport(sly.app.Import):
+    def process(self, context: sly.app.Import.Context):
+
+        project_dir = context.path
+        if context.is_directory is False:
+            project_folder = join(STORAGE_DIR, get_file_name(project_dir))
+            shutil.unpack_archive(project_dir, project_folder)
+            silent_remove(project_dir)
+            project_dir = project_folder
+        project_name = os.path.basename(project_dir)
+        sly.upload_volume_project(
+            dir=project_dir,
+            api=api,
+            workspace_id=context.workspace_id,
+            project_name=project_name,
+            log_progress=True,
+        )
+
+
+app = MyImport()
+app.run()
