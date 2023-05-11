@@ -8,11 +8,19 @@ import sly_globals as g
 
 @g.my_app.callback("import-volumes-with-anns")
 @sly.timeit
-def import_volumes_with_anns(api: sly.Api, task_id: int, context: dict, state: dict, app_logger) -> None:
-
+def import_volumes_with_anns(
+    api: sly.Api, task_id: int, context: dict, state: dict, app_logger
+) -> None:
     project_dir = f.download_data_from_team_files(api=api, task_id=task_id, save_path=g.STORAGE_DIR)
     project_name = os.path.basename(project_dir)
-    sly.upload_volume_project(dir=project_dir, api=api, workspace_id=g.WORKSPACE_ID, project_name=project_name, log_progress=True)
+    upload_dir = os.path.dirname(project_dir)
+    sly.upload_volume_project(
+        dir=upload_dir,
+        api=api,
+        workspace_id=g.WORKSPACE_ID,
+        project_name=project_name,
+        log_progress=True,
+    )
 
     g.my_app.stop()
 
