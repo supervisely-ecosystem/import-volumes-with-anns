@@ -13,7 +13,6 @@ def import_volumes_with_anns(
 ) -> None:
     project_dir = f.download_data_from_team_files(api=api, task_id=task_id, save_path=g.STORAGE_DIR)
     project_name = os.path.basename(project_dir)
-    sly.logger.info(f"project_dir: {project_dir}")
     sly.upload_volume_project(
         dir=project_dir,
         api=api,
