@@ -1,1 +1,1 @@
-supervisely==6.72.7
+git+https://github.com/supervisely/supervisely.git@fix_upload_volume_project
