@@ -5,16 +5,16 @@ from pathlib import Path
 import supervisely as sly
 from supervisely.app.v1.app_service import AppService
 from supervisely.io.fs import mkdir
+from dotenv import load_dotenv
 
 root_source_dir = str(Path(sys.argv[0]).parents[1])
 print(f"App source directory: {root_source_dir}")
 sys.path.append(root_source_dir)
 
-# only for convenient debug
-# from dotenv import load_dotenv
-# if sly.is_development():
-#     load_dotenv("debug.env")
-#     load_dotenv(os.path.expanduser("~/supervisely.env"))
+
+if sly.is_development():
+    load_dotenv("debug.env")
+    load_dotenv(os.path.expanduser("~/supervisely.env"))
 
 api: sly.Api = sly.Api.from_env()
 my_app: AppService = AppService()
