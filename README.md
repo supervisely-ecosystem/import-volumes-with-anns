@@ -40,24 +40,24 @@ Project directory example:
 
 ```
 📦project.tar
-└──📂project_dir
-    ├──📂dataset_1
-    │   ├──📂ann
-    │   │   └──📜MRHead.nrrd.json
-    │   └──📂volume
-    │       └──📜MRHead.nrrd
-    ├──📂dataset_2
-    │   ├──📂ann
-    │   │   ├──📜CTACardio.nrrd.json
-    │   │   └──📜CTChest.nrrd.json
-    │   ├──📂interpolation
-    │   │   └──📂CTChest.nrrd
-    │   │       └──📜daff638a423a4bcfa34eb12e42243a87.stl
-    │   └──📂volume
-    │       ├──📜CTACardio.nrrd
-    │       └──📜CTChest.nrrd
-    ├──📜key_id_map.json
-    └──📜meta.json
+ └──📂project_dir
+     ├──📂dataset_1
+     │   ├──📂ann
+     │   │   └──📜MRHead.nrrd.json
+     │   └──📂volume
+     │        └──📜MRHead.nrrd
+     ├──📂dataset_2
+     │   ├──📂ann
+     │   │   ├──📜CTACardio.nrrd.json
+     │   │   └──📜CTChest.nrrd.json
+     │   ├──📂interpolation
+     │   │   └──📂CTChest.nrrd
+     │   │       └──📜daff638a423a4bcfa34eb12e42243a87.stl
+     │   └──📂volume
+     │       ├──📜CTACardio.nrrd
+     │       └──📜CTChest.nrrd
+     ├──📜key_id_map.json
+     └──📜meta.json
 ```
 
 As a result, we will get project `my_volumes_project` with 2 datasets named: `ds1` and `ds2`.
