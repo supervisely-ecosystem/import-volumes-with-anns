@@ -32,7 +32,8 @@ Import volumes in Supervisely format with annotations. Volume files must be in `
 
 #### Input files structure
 
-You can upload a directory or an archive. If you are uploading an archive, it must contain a single top-level directory.
+You can upload a directory or an archive. If you are uploading an archive, it must contain a single top-level directory.<br>
+ℹ️ You can download the archive with data example [here](https://github.com/supervisely-ecosystem/import-volumes-with-anns/files/12548165/my_volume_project.zip).<br>
 
 The directory name defines the project name. Subdirectories define dataset names.
 
