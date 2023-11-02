@@ -5,9 +5,9 @@
 # Import Volumes in Supervisely format
 
 <p align="center">
-  <a href="#Overview">Overview</a> •
-  <a href="#How-to-Run">How to Run</a> •
-  <a href="#Demo">Demo</a>
+  <a href="#overview">Overview</a> •
+  <a href="#whats-new">What's new</a> •
+  <a href="#how-to-run">How to Run</a>
 </p>
 
 
@@ -19,16 +19,26 @@
 
 </div>
 
-# Overview
+## Overview
 
 Import volumes in Supervisely format with annotations. Volume files must be in `.NRRD` format.
 
-🏋️ Starting from version `v1.2.0` application supports import from a special directory on your local computer. It is made for Enterprise Edition customers who need to upload tens or even hundreds of gigabytes of data without using a drag-and-drop mechanism:
 
-1. Run an agent on your computer where data is stored. Watch the [how-to video](https://youtu.be/aO7Zc4kTrVg).
-2. Copy your data to a special folder on your computer that was created by the agent. Agent mounts this directory to your Supervisely instance and it becomes accessible in Team Files. Learn more in the [documentation](https://docs.supervise.ly/customization/agents/agent-storage). Watch the [how-to video](https://youtu.be/63Kc8Xq9H0U).
-3. Go to `Team Files` -> `Supervisely Agent` and find your folder there.
-4. Right-click to open context the menu and start the app. Now the app will upload data directly from your computer to the platform.
+## What's new 
+
+Version `v1.3.0`
+ - 🏷️ new format for storing `Mask3D` geometry as `.nrrd` files in the `mask` directory. To learn more read [this article](https://docs.supervisely.com/data-organization/00_ann_format_navi/08_supervisely_format_volume).
+ - ℹ️ Convert closed mesh surfaces `.stl` to `Mask3D` automatically on uploading due to format obsolescence. On subsequent export you will get interpolation annotation objects as `Masks3D` with geometries in `.nrrd` files.
+
+Version `v1.2.0`
+ - 🏋️ application supports import from a special directory on your local computer. It is made for Enterprise Edition customers who need to upload tens or even hundreds of gigabytes of data without using a drag-and-drop mechanism:
+    1. Run an agent on your computer where data is stored. Watch the [how-to video](https://youtu.be/aO7Zc4kTrVg).
+    2. Copy your data to a special folder on your computer that was created by the agent. Agent mounts this directory to your Supervisely instance and it becomes accessible in Team Files. Learn more in the [documentation](https://docs.supervise.ly/customization/agents/agent-storage). Watch the [how-to video](https://youtu.be/63Kc8Xq9H0U).
+    3. Go to `Team Files` -> `Supervisely Agent` and find your folder there.
+    4. Right-click to open context the menu and start the app. Now the app will upload data directly from your computer to the platform.
+
+
+## How to Run
 
 #### Input files structure
 
@@ -44,26 +54,28 @@ Project directory example:
  └──📂project_dir
      ├──📂dataset_1
      │   ├──📂ann
-     │   │   └──📜MRHead.nrrd.json
-     │   └──📂volume
-     │        └──📜MRHead.nrrd
-     ├──📂dataset_2
-     │   ├──📂ann
-     │   │   ├──📜CTACardio.nrrd.json
-     │   │   └──📜CTChest.nrrd.json
+     │   │   ├──📜MRHead.nrrd.json
+     │   │   └── ...    
      │   ├──📂interpolation
-     │   │   └──📂CTChest.nrrd
-     │   │       └──📜daff638a423a4bcfa34eb12e42243a87.stl
+     │   │   ├──📂MRHead.nrrd
+     │   │   │   ├──📜daff638a423a4bcfa34eb12e42243a87.stl
+     │   │   │   └── ...
+     │   │   └── ... 
+     │   ├──📂mask
+     │   │   ├──📂MRHead.nrrd
+     │   │   │   ├──📜78cc73a8bd654ab3951dde035f760ab1.nrrd
+     │   │   │   └── ...
+     │   │   └── ... 
      │   └──📂volume
-     │       ├──📜CTACardio.nrrd
-     │       └──📜CTChest.nrrd
+     │        ├──📜MRHead.nrrd
+     │        └── ...    
+     ├──📂...
+     │
      ├──📜key_id_map.json
      └──📜meta.json
 ```
 
 As a result, we will get project `my_volumes_project` with 2 datasets named: `ds1` and `ds2`.
-
-# How to Run
 
 **Step 1.** Add [Import Volumes in Supervisely format](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/import-volumes-with-anns) app to your team from Ecosystem
 
@@ -81,8 +93,5 @@ As a result, we will get project `my_volumes_project` with 2 datasets named: `ds
 
 <img src="https://i.imgur.com/xnPdWWa.png" width="80%" style='padding-top: 10px'>
 
-### Demo
-Example of uploading volumes project with annotations to Supervisely:
-![](https://i.imgur.com/61MvEbb.gif)
 
 
