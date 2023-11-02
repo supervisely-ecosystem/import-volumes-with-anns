@@ -27,8 +27,8 @@ Import volumes in Supervisely format with annotations. Volume files must be in `
 ## What's new 
 
 Version `v1.3.0`
- - 🏷️ Support new format of storing Mask3D geometry as `.nrrd` files in the `mask` directory. To learn more read [this article](https://docs.supervisely.com/data-organization/00_ann_format_navi/08_supervisely_format_volume).
- - ℹ️ Convert closed mesh surfaces `.stl` to Mask3D automatically on uploading due to format obsolescence. On subsequent export you will get interpolation annotation objects as Masks3D with geometries in `.nrrd` files.
+ - 🏷️ Support for a new format for storing Mask3D objects geometry as `.nrrd` files in the `mask` directory. To learn more read [this article](https://docs.supervisely.com/data-organization/00_ann_format_navi/08_supervisely_format_volume).
+ - ℹ️ Automatic conversion of `.stl` closed mesh surface interpolations to Mask3D when uploaded due to format obsolescence. On subsequent export you will get interpolation annotation objects as Masks3D with geometries in `.nrrd` files.
 
 Version `v1.2.0`
  - 🏋️ application supports import from a special directory on your local computer. It is made for Enterprise Edition customers who need to upload tens or even hundreds of gigabytes of data without using a drag-and-drop mechanism:
