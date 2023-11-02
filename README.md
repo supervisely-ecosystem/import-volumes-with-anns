@@ -33,8 +33,8 @@ Version `v1.3.0`
 Version `v1.2.0`
  - 🏋️ application supports import from a special directory on your local computer. It is made for Enterprise Edition customers who need to upload tens or even hundreds of gigabytes of data without using a drag-and-drop mechanism:
     1. Run an agent on your computer where data is stored. Watch the [how-to video](https://youtu.be/aO7Zc4kTrVg).
-    2. Copy your data to a special folder on your computer that was created by the agent. Agent mounts this directory to your Supervisely instance and it becomes accessible in Team Files. Learn more in the [documentation](https://docs.supervise.ly/customization/agents/agent-storage). Watch the [how-to video](https://youtu.be/63Kc8Xq9H0U).
-    3. Go to `Team Files` -> `Supervisely Agent` and find your folder there.
+    2. Copy your data to a special folder on your computer that was created by the agent. Agent mounts this directory to your Supervisely instance, and it becomes accessible in Team Files. Learn more in the [documentation](https://docs.supervise.ly/customization/agents/agent-storage). Watch the [how-to video](https://youtu.be/63Kc8Xq9H0U).
+    3. Go to `Team Files` → `Supervisely Agent` and find your folder there.
     4. Right-click to open context the menu and start the app. Now the app will upload data directly from your computer to the platform.
 
 
@@ -43,7 +43,7 @@ Version `v1.2.0`
 #### Input files structure
 
 You can upload a directory or an archive. If you are uploading an archive, it must contain a single top-level directory.<br>
-ℹ️ To see the structure, download this [sample](https://github.com/supervisely-ecosystem/import-volumes-with-anns/files/12548165/my_volume_project.zip).<br>
+ℹ️ To see the structure, download this [sample](https://github.com/supervisely-ecosystem/import-volumes-with-anns/releases/download/untagged-d5e038177e15d48a8fb4/Volume_Project.tar) (38.1 MB).<br>
 
 The directory name defines the project name. Subdirectories define dataset names.
 
@@ -54,20 +54,20 @@ Project directory example:
  └──📂project_dir
      ├──📂dataset_1
      │   ├──📂ann
-     │   │   ├──📜MRHead.nrrd.json
+     │   │   ├──📜CTChest.nrrd.json
      │   │   └── ...    
      │   ├──📂interpolation
-     │   │   ├──📂MRHead.nrrd
+     │   │   ├──📂CTChest.nrrd
      │   │   │   ├──📜daff638a423a4bcfa34eb12e42243a87.stl
      │   │   │   └── ...
      │   │   └── ... 
      │   ├──📂mask
-     │   │   ├──📂MRHead.nrrd
-     │   │   │   ├──📜78cc73a8bd654ab3951dde035f760ab1.nrrd
+     │   │   ├──📂CTChest.nrrd
+     │   │   │   ├──📜d18d9395401746e895c7e4029158c6ab.nrrd
      │   │   │   └── ...
      │   │   └── ... 
      │   └──📂volume
-     │        ├──📜MRHead.nrrd
+     │        ├──📜CTChest.nrrd
      │        └── ...    
      ├──📂...
      │
