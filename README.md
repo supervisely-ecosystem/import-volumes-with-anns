@@ -1,6 +1,6 @@
 <div align="center" markdown>
 
-<img src="https://user-images.githubusercontent.com/48245050/182855159-50a5c414-268d-4d50-9d2a-b04c04fb07bf.jpg"/>
+<img src="https://github.com/supervisely-ecosystem/import-volumes-with-anns/assets/57998637/fa40e0e7-c657-45c6-90bf-0ccab5ebb7ba"/>
 
 # Import Volumes in Supervisely format
 
@@ -77,21 +77,33 @@ Project directory example:
 
 As a result, we will get project `my_volumes_project` with 2 datasets named: `ds1` and `ds2`.
 
-**Step 1.** Add [Import Volumes in Supervisely format](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/import-volumes-with-anns) app to your team from Ecosystem
+**Option 1.** 
+
+Run the app from its page - [Import Volumes in Supervisely format](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/import-volumes-with-anns)
 
 <img data-key="sly-module-link" data-module-slug="supervisely-ecosystem/import-volumes-with-anns" src="https://i.imgur.com/16lSFXP.png" width="350px" style='padding-bottom: 10px'/>
 
-**Step 2.** Run the application from the context menu of the directory with images on the Team Files page
+You will have a choice of which `Input Type` to import the project into.
 
-<img src="https://i.imgur.com/zqpVnE8.png" width="80%" style='padding-top: 10px'>  
+<img src="https://github.com/supervisely-ecosystem/import-volumes-with-anns/assets/57998637/a5ec9469-0fe5-4904-8771-3e523c781643" width="80%" style='padding-top: 10px'>
 
-**Step 3.** Press the Run button in the modal window
+<br>
 
-<img src="https://i.imgur.com/raSxilo.png" width="80%" style='padding-top: 10px'>
+**Option 2.**
 
-**Step 4.** After running the application, you will be redirected to the Tasks page. Once application processing has finished, your project will become available. Click on the project name to open it.
+Run the application from the context menu of the directory with images on the Team Files page.
 
-<img src="https://i.imgur.com/xnPdWWa.png" width="80%" style='padding-top: 10px'>
+<img src="https://github.com/supervisely-ecosystem/import-volumes-with-anns/assets/57998637/a8b58c68-d351-426e-b620-5a1222ee4a90" width="80%" style='padding-top: 10px'> 
+
+<br>
+
+**Common Actions** 
+
+Press the `Run` button in the modal window
+
+After running the application, you will be redirected to the `Workspace Tasks` page. Once application processing has finished, your project will become available. Click on the project name to open it.
+
+<img src="https://github.com/supervisely-ecosystem/import-volumes-with-anns/assets/57998637/1cdb4756-b952-4444-8ba7-090c093e3a87" width="80%" style='padding-top: 10px'>
 
 
 
