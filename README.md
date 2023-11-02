@@ -43,7 +43,7 @@ Version `v1.2.0`
 #### Input files structure
 
 You can upload a directory or an archive. If you are uploading an archive, it must contain a single top-level directory.<br>
-ℹ️ You can download the archive with data example [here](https://github.com/supervisely-ecosystem/import-volumes-with-anns/files/12548165/my_volume_project.zip).<br>
+ℹ️ To see the structure, download this [sample](https://github.com/supervisely-ecosystem/import-volumes-with-anns/files/12548165/my_volume_project.zip).<br>
 
 The directory name defines the project name. Subdirectories define dataset names.
 
@@ -74,8 +74,6 @@ Project directory example:
      ├──📜key_id_map.json
      └──📜meta.json
 ```
-
-As a result, we will get project `my_volumes_project` with 2 datasets named: `ds1` and `ds2`.
 
 **Option 1.** 
 
