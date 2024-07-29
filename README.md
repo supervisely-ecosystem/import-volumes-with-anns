@@ -43,7 +43,7 @@ Version `v1.2.0`
 #### Input files structure
 
 You can upload a directory or an archive. If you are uploading an archive, it must contain a single top-level directory.<br>
-ℹ️ To see the structure, download this [sample](https://github.com/supervisely-ecosystem/import-volumes-with-anns/releases/download/untagged-d5e038177e15d48a8fb4/Volume_Project.tar) (38.1 MB).<br>
+ℹ️ To see the structure, download this [sample](https://github.com/supervisely-ecosystem/import-volumes-with-anns/releases/download/v1.3.1/Volume_Project.tar) (38.1 MB).<br>
 
 The directory name defines the project name. Subdirectories define dataset names.
 
