@@ -4,6 +4,7 @@ import supervisely as sly
 
 import sly_functions as f
 import sly_globals as g
+import workflow as w
 
 
 @g.my_app.callback("import-volumes-with-anns")
@@ -13,14 +14,14 @@ def import_volumes_with_anns(
 ) -> None:
     project_dir = f.download_data_from_team_files(api=api, task_id=task_id, save_path=g.STORAGE_DIR)
     project_name = os.path.basename(project_dir)
-    sly.upload_volume_project(
+    project_id, _ = sly.upload_volume_project(
         dir=project_dir,
         api=api,
         workspace_id=g.WORKSPACE_ID,
         project_name=project_name,
         log_progress=True,
     )
-
+    w.workflow_output(api, project_id)
     g.my_app.stop()
 
 
