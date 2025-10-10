@@ -11,7 +11,7 @@
 </p>
 
 
-[![](https://img.shields.io/badge/supervisely-ecosystem-brightgreen)](https://ecosystem.supervisely.com/apps/supervisely-ecosystem/import-volumes-with-anns)
+[![](https://img.shields.io/badge/supervisely-ecosystem-brightgreen)](../../../../supervisely-ecosystem/import-volumes-with-anns)
 [![](https://img.shields.io/badge/slack-chat-green.svg?logo=slack)](https://supervisely.com/slack)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/supervisely-ecosystem/import-volumes-with-anns)
 [![views](https://app.supervisely.com/img/badges/views/supervisely-ecosystem/import-volumes-with-anns.png)](https://supervisely.com)
@@ -77,7 +77,7 @@ Project directory example:
 
 **Option 1.** 
 
-Run the app from its page - [Import Volumes in Supervisely format](https://ecosystem.supervisely.com/apps/supervisely-ecosystem/import-volumes-with-anns)
+Run the app from its page - [Import Volumes in Supervisely format](../../../../supervisely-ecosystem/import-volumes-with-anns)
 
 <img data-key="sly-module-link" data-module-slug="supervisely-ecosystem/import-volumes-with-anns" src="https://i.imgur.com/16lSFXP.png" width="350px" style='padding-bottom: 10px'/>
 
